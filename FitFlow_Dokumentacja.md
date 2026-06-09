@@ -6,25 +6,16 @@
 | **Typ projektu** | Nowy system informatyczny (greenfield)                       |
 | **Temat** | System zarządzania siecią klubów fitness — *FitFlow*         |
 | **Klient (fikcyjny)** | Vitality Fitness sp. z o.o. (3 kluby, plany ekspansji)       |
-| **Standard dokumentacji** | SRS (IEEE 830 / ISO/IEC/IEEE 29148) + podejście Volere       |
 | **Zespół** | Bartłomiej Podlewski, Dawid Osak, Jakub Wiatr, Norbert Szopa |
 
----
+## Role w zespole
 
-## Mapa punktacji i warunki zaliczenia
-
-| # | Obszar oceny | Maks | Gdzie w dokumencie | Pkt |
-|---|---|:--:|---|:--:|
-| 1 | Kontekst i interesariusze | 5 | [Część I](#część-i--specyfikacja-wymagań-oprogramowania-srs) §2.3, §3 | 5 |
-| 2 | Pozyskiwanie wymagań | 7 | [Część II](#część-ii--pozyskiwanie-wymagań) | 7 |
-| 3 | Specyfikacja wymagań | 8 | [Część I](#część-i--specyfikacja-wymagań-oprogramowania-srs) §4–§6 | 8 |
-| 4 | Modelowanie | 5 | [Część I](#część-i--specyfikacja-wymagań-oprogramowania-srs) §7 | 5 |
-| 5 | Priorytetyzacja | 5 | [Część III](#część-iii--priorytetyzacja-wymagań) | 5 |
-| 6 | Walidacja | 5 | [Część IV](#część-iv--walidacja-wymagań) | 5 |
-| 7 | Zarządzanie zmianą | 7 | [Część V](#część-v--zarządzanie-zmianą) | 7 |
-| 8 | Role-playing | 3 | [Część VI](#część-vi--role-playing) | 3 |
-| 9 | Dokumentacja SRS + Volere | 5 | [Część I](#część-i--specyfikacja-wymagań-oprogramowania-srs) (SRS) + [Część VII](#część-vii--dokumentacja-volere) (Volere) | 5 |
-| | **SUMA** | **50** | | **50** |
+| Osoba | Imię i nazwisko        | Rola w projekcie | Rola w role-playingu |
+|---|------------------------|---|---|
+| **Osoba 1** | _Jakub Wiatr_          | Analityk biznesowy / Lider kontekstu | **Klient / Sponsor** (Właściciel sieci) |
+| **Osoba 2** | _Bartłomiej Podlewski_ | Inżynier wymagań / Specyfikacja | **Użytkownik końcowy** (Członek / Trener) |
+| **Osoba 3** | _Norbert Szopa_        | Architekt / Modelarz / QA | **Administrator** (IT / Recepcja) |
+| **Osoba 4** | _Dawid Osak_           | Menedżer wymagań / Product Owner | **Biznes** (Manager operacyjny) |
 
 ---
 
@@ -99,10 +90,10 @@ personalnych, kontrolę wejść, płatności cykliczne, aż po raportowanie zarz
 - ISO/IEC 25010:2011 — *Model jakości produktu programowego*.
 - Suzanne & James Robertson — *Volere Requirements Specification Template*.
 - Rozporządzenie (UE) 2016/679 (RODO).
-- Dokumenty projektu: [`02_Pozyskiwanie_wymagan.md`](#część-ii--pozyskiwanie-wymagań),
-  [`03_Priorytetyzacja.md`](#część-iii--priorytetyzacja-wymagań), [`04_Walidacja.md`](#część-iv--walidacja-wymagań),
-  [`05_Zarzadzanie_zmiana.md`](#część-v--zarządzanie-zmianą), [`06_Role_playing.md`](#część-vi--role-playing),
-  [`07_Volere.md`](#część-vii--dokumentacja-volere).
+- Dokumenty projektu: [Część II (pozyskiwanie wymagań)](#część-ii--pozyskiwanie-wymagań),
+  [Część III (priorytetyzacja)](#część-iii--priorytetyzacja-wymagań), [Część IV (walidacja)](#część-iv--walidacja-wymagań),
+  [Część V (zarządzanie zmianą)](#część-v--zarządzanie-zmianą), [Część VI (role-playing)](#część-vi--role-playing),
+  [Część VII (Volere)](#część-vii--dokumentacja-volere).
 
 #### 1.5 Przegląd dokumentu
 Rozdział 2 opisuje produkt z lotu ptaka (kontekst, funkcje, użytkownicy, ograniczenia).
@@ -176,7 +167,6 @@ Główne grupy funkcji (moduły):
 ---
 
 ### 3. Interesariusze i kontekst
-*Realizuje obszar 1 punktacji.*
 
 #### 3.1 Lista interesariuszy
 
@@ -235,8 +225,8 @@ Granicę systemu i przepływy z otoczeniem przedstawia diagram kontekstowy ([§7
 
 ### 4. Wymagania funkcjonalne
 
-Format: **FR-xxx** | Priorytet MoSCoW (uzasadnienia → [`03_Priorytetyzacja.md`](#część-iii--priorytetyzacja-wymagań)).
-Pełne kryteria akceptacji (fit criteria) → [`07_Volere.md`](#część-vii--dokumentacja-volere).
+Format: **FR-xxx** | Priorytet MoSCoW (uzasadnienia → [Część III (priorytetyzacja)](#część-iii--priorytetyzacja-wymagań)).
+Pełne kryteria akceptacji (fit criteria) → [Część VII (Volere)](#część-vii--dokumentacja-volere).
 
 #### Moduł M1 — Konta i członkostwo
 
@@ -317,9 +307,6 @@ Pełne kryteria akceptacji (fit criteria) → [`07_Volere.md`](#część-vii--do
 | ID | Wymaganie | Priorytet | Źródło |
 |---|---|---|---|
 | **FR-025** | System umożliwia **rezerwację i udział w zajęciach online** (link do transmisji dla zapisanych członków) oraz dostęp do nagrań VOD. | Could | CR-03 |
-
-> **Liczba wymagań funkcjonalnych: 25** (FR-001…FR-025).
-> Próg „min. 15–20" spełniony z zapasem.
 
 ---
 
@@ -709,13 +696,13 @@ sequenceDiagram
 |---|---|---|---|
 | 0.1 | 2026-03-10 | Zespół | Szkielet SRS, rozdziały 1–2. |
 | 0.5 | 2026-03-28 | Zespół | Wymagania FR/NFR, user stories, UC, modele. |
-| 1.0 | 2026-04-15 | Zespół | Baseline po walidacji (zob. `04_Walidacja.md`). |
-| **1.1** | **2026-05-20** | **Zespół** | Wdrożenie zmian **CR-01, CR-02, CR-03** (FR-005, FR-014, FR-015, FR-024, FR-025); aktualizacja modeli i kontekstu (zob. `05_Zarzadzanie_zmiana.md`). |
+| 1.0 | 2026-04-15 | Zespół | Baseline po walidacji (zob. [Część IV (walidacja)](#część-iv--walidacja-wymagań)). |
+| **1.1** | **2026-05-20** | **Zespół** | Wdrożenie zmian **CR-01, CR-02, CR-03** (FR-005, FR-014, FR-015, FR-024, FR-025); aktualizacja modeli i kontekstu (zob. [Część V (zarządzanie zmianą)](#część-v--zarządzanie-zmianą)). |
 
-> **Powiązania:** priorytety → [`03_Priorytetyzacja.md`](#część-iii--priorytetyzacja-wymagań) ·
-> walidacja i testy → [`04_Walidacja.md`](#część-iv--walidacja-wymagań) ·
-> zmiany → [`05_Zarzadzanie_zmiana.md`](#część-v--zarządzanie-zmianą) ·
-> szablony Volere → [`07_Volere.md`](#część-vii--dokumentacja-volere).
+> **Powiązania:** priorytety → [Część III (priorytetyzacja)](#część-iii--priorytetyzacja-wymagań) ·
+> walidacja i testy → [Część IV (walidacja)](#część-iv--walidacja-wymagań) ·
+> zmiany → [Część V (zarządzanie zmianą)](#część-v--zarządzanie-zmianą) ·
+> szablony Volere → [Część VII (Volere)](#część-vii--dokumentacja-volere).
 
 
 ---
@@ -723,7 +710,6 @@ sequenceDiagram
 ## Część II — Pozyskiwanie wymagań
 
 ### 1. Uzasadnienie doboru metod
-*Punktacja: 0–2.*
 
 Zastosowano **triangulację** trzech komplementarnych technik, aby pozyskać wymagania
 z różnych źródeł i ograniczyć błąd pojedynczej metody.
@@ -738,7 +724,7 @@ z różnych źródeł i ograniczyć błąd pojedynczej metody.
 priorytety u masy użytkowników*, a analiza konkurencji *kotwiczy zakres względem rynku*.
 Tam, gdzie trzy źródła są zgodne (np. rezerwacja zajęć online), wymaganie ma wysoki
 priorytet i niskie ryzyko. Tam, gdzie się różnią (np. karty partnerskie), uruchamiamy
-negocjacje w role-playingu ([`06_Role_playing.md`](#część-vi--role-playing)).
+negocjacje w role-playingu ([Część VI (role-playing)](#część-vi--role-playing)).
 
 ---
 
@@ -751,13 +737,13 @@ role-playing (członkowie zespołu wcielają się w interesariuszy na podstawie 
 #### 2.1 Wywiad W-1 — Właściciel sieci (sponsor)
 > Rola: S1. Cel rozmowy: wizja, cele biznesowe, KPI.
 
-**A (analityk):** Jaki jest główny powód, dla którego chce Pani wdrożyć nowy system?
+**A (analityk):** Jaki jest główny powód, dla którego chce Pan wdrożyć nowy system?
 **Właściciel:** Rośniemy — mamy trzy kluby i chcemy szósty w dwa lata. Dziś wszystko
 trzymamy w arkuszach i głowach pracowników. Tracę pieniądze na „martwych duszach" —
 ludziach, którzy płacą raz i znikają, albo odwrotnie: korzystają, a system tego nie łapie.
 Nie mam jednego miejsca, gdzie widzę przychód i frekwencję ze wszystkich klubów.
 
-**A:** Co byłoby dla Pani miarą sukcesu wdrożenia?
+**A:** Co byłoby dla Pana miarą sukcesu wdrożenia?
 **Właściciel:** Trzy rzeczy: wzrost odnowień karnetów, mniej pracy recepcji przy rozliczeniach
 i raport, który w 30 sekund pokaże mi przychód i obłożenie per klub. I sprzedaż karnetów
 **online** — dziś tracę klientów, którzy nie chcą przychodzić, żeby zapłacić gotówką.
@@ -806,7 +792,7 @@ zamrożenia karnetu liczyły się same.
 
 #### 2.4 Podsumowanie wywiadów
 - **Zgodność:** wszyscy wskazują na potrzebę rezerwacji online, check-in QR i automatyzacji rozliczeń.
-- **Konflikt do rozwiązania:** karty partnerskie (właściciel: przychód ↔ administrator/recepcja: rozliczenia/bezpieczeństwo) — przeniesiony do warsztatu negocjacyjnego ([`06_Role_playing.md`](#część-vi--role-playing)).
+- **Konflikt do rozwiązania:** karty partnerskie (właściciel: przychód ↔ administrator/recepcja: rozliczenia/bezpieczeństwo) — przeniesiony do warsztatu negocjacyjnego ([Część VI (role-playing)](#część-vi--role-playing)).
 - **Wymaganie ukryte:** kontrola kolizji sal (FR-021) — nie padło wprost, wynikło z opisu problemu.
 
 ---
@@ -820,15 +806,15 @@ zamrożenia karnetu liczyły się same.
 #### 3.1 Kwestionariusz (wyciąg, 12 pytań)
 **Metryczka:** wiek, częstość wizyt, typ karnetu.
 1. Jak często korzystasz z klubu? *(skala)*
-2. Czy chciał(a)byś rezerwować zajęcia online? *(tak/nie/obojętne)*
+2. Czy chciałbyś rezerwować zajęcia online? *(tak/nie/obojętne)*
 3. Jak ważna jest dla Ciebie aplikacja mobilna? *(1–5)*
-4. Czy korzystał(a)byś z **listy rezerwowej** na pełne zajęcia? *(tak/nie)*
+4. Czy korzystałbyś z **listy rezerwowej** na pełne zajęcia? *(tak/nie)*
 5. Jak ważne jest wejście do klubu **kodem QR** (bez karty)? *(1–5)*
 6. Czy chcesz płacić za karnet **online** (karta/BLIK)? *(tak/nie)*
 7. Czy interesuje Cię **automatyczne odnawianie** karnetu? *(tak/nie/nie wiem)*
 8. Jak ważna jest możliwość **zamrożenia** karnetu? *(1–5)*
 9. Czy chcesz **powiadomienia** (przypomnienia o zajęciach)? *(tak/nie)*
-10. Czy korzystasz lub korzystał(a)byś z **kart partnerskich** (Multisport)? *(tak/nie)*
+10. Czy korzystasz lub korzystałbyś z **kart partnerskich** (Multisport)? *(tak/nie)*
 11. Czy interesują Cię **zajęcia online / nagrania**? *(1–5)*
 12. Czego najbardziej brakuje Ci w obecnej obsłudze klubu? *(otwarte)*
 
@@ -900,9 +886,9 @@ Legenda: ✅ pełne · ⚠️ częściowe/dopłata · ❌ brak.
 | Ankieta | walidacja priorytetów u członków | potwierdza FR-007/008/009/013/014/017 |
 | Analiza konkurencji | bazowy zakres + przewagi | potwierdza Must; uzasadnia FR-024 (CR-02), FR-025 (CR-03) |
 
-Pozyskane wymagania trafiają do specyfikacji ([`01_SRS.md`](#część-i--specyfikacja-wymagań-oprogramowania-srs)), są
-priorytetyzowane ([`03_Priorytetyzacja.md`](#część-iii--priorytetyzacja-wymagań)) i walidowane
-([`04_Walidacja.md`](#część-iv--walidacja-wymagań)).
+Pozyskane wymagania trafiają do specyfikacji ([Część I (SRS)](#część-i--specyfikacja-wymagań-oprogramowania-srs)), są
+priorytetyzowane ([Część III (priorytetyzacja)](#część-iii--priorytetyzacja-wymagań)) i walidowane
+([Część IV (walidacja)](#część-iv--walidacja-wymagań)).
 
 
 ---
@@ -918,7 +904,7 @@ priorytetyzowane ([`03_Priorytetyzacja.md`](#część-iii--priorytetyzacja-wymag
 - **Won't have (this time)** — świadomie poza zakresem obecnej edycji.
 
 Priorytet ustalono na podstawie **4 kryteriów** (skala 1–5), spójnych ze źródłami z
-[`02_Pozyskiwanie_wymagan.md`](#część-ii--pozyskiwanie-wymagań):
+[Część II (pozyskiwanie wymagań)](#część-ii--pozyskiwanie-wymagań):
 
 | Kryterium | Opis |
 |---|---|
@@ -954,7 +940,6 @@ Priorytet ustalono na podstawie **4 kryteriów** (skala 1–5), spójnych ze źr
 ---
 
 ### 3. Uzasadnienie priorytetów
-*Punktacja: 0–3.*
 
 #### 3.1 Dlaczego MUST
 | Wymaganie | Uzasadnienie (wartość / ryzyko / zależności) |
@@ -986,7 +971,7 @@ Priorytet ustalono na podstawie **4 kryteriów** (skala 1–5), spójnych ze źr
 - **Właściciel vs. Administrator (karty partnerskie):** właściciel pchał FR-024 do *Must*
   (przychód), administrator ostrzegał przed ryzykiem rozliczeń/bezpieczeństwa. **Decyzja:**
   *Should*, wdrożenie jako kontrolowana zmiana CR-02 po MVP. Zob.
-  [`06_Role_playing.md`](#część-vi--role-playing) (warsztat negocjacyjny).
+  [Część VI (role-playing)](#część-vi--role-playing) (warsztat negocjacyjny).
 - **Dostępność (NFR-011 WCAG):** formalnie *Could*, ale zespół rekomenduje wdrożenie od startu
   — koszt późnej zgodności jest znacznie wyższy niż projektowanie dostępne od początku.
 
@@ -1041,8 +1026,8 @@ flowchart LR
 ```
 
 Priorytety są wejściem do walidacji (Must mają obowiązkowe scenariusze testowe —
-[`04_Walidacja.md`](#część-iv--walidacja-wymagań)) oraz do analizy zmian
-([`05_Zarzadzanie_zmiana.md`](#część-v--zarządzanie-zmianą)).
+[Część IV (walidacja)](#część-iv--walidacja-wymagań)) oraz do analizy zmian
+([Część V (zarządzanie zmianą)](#część-v--zarządzanie-zmianą)).
 
 
 ---
@@ -1050,7 +1035,6 @@ Priorytety są wejściem do walidacji (Must mają obowiązkowe scenariusze testo
 ## Część IV — Walidacja wymagań
 
 ### 1. Checklist jakości wymagań
-*Punktacja: 0–2.*
 
 Kryteria jakości (zgodne z Volere i zasadą **SMART**/INVEST), zastosowane do każdego wymagania:
 
@@ -1090,7 +1074,6 @@ Kryteria jakości (zgodne z Volere i zasadą **SMART**/INVEST), zastosowane do k
 ---
 
 ### 2. Scenariusze testowe
-*Punktacja: 0–2.*
 
 Format **Given / When / Then** (testy akceptacyjne). Każdy **Must-FR** ma min. 1 scenariusz.
 
@@ -1116,7 +1099,7 @@ Format **Given / When / Then** (testy akceptacyjne). Każdy **Must-FR** ma min. 
 #### 3.1 Spójność
 - **Brak sprzeczności** po naprawie D-04 (zamrożony karnet ↔ check-in). Reguły anulacji
   (FR-009/FR-020) i polityki płatności (FR-015) są wzajemnie zgodne.
-- **Spójność terminologii** — pojęcia zgodne ze słownikiem ([`01_SRS.md` §1.3](#13-definicje-akronimy-i-skróty-słownik)).
+- **Spójność terminologii** — pojęcia zgodne ze słownikiem ([Część I (SRS) §1.3](#13-definicje-akronimy-i-skróty-słownik)).
 - **Spójność priorytetów** — każde Must-FR ma scenariusz testowy (zob. macierz §4).
 
 #### 3.2 Kompletność
@@ -1228,7 +1211,7 @@ aby zwiększyć przychód i odnowienia oraz odciążyć recepcję.
 **Zaakceptowana jako Must.** Bezpośredni wpływ na cel #1 (przychód), wysoki popyt, standard
 rynkowy. Warunki: tokenizacja (zero przechowywania danych kart), jasna obsługa błędów
 płatności (retry + powiadomienia + zawieszenie). Zob.
-[`06_Role_playing.md` §3](#część-vi--role-playing).
+[Część VI (role-playing) §3](#3-sesja-change-board--ocena-zmian).
 
 ---
 
@@ -1246,7 +1229,7 @@ nie przewidywał.
 
 | Wymiar | Wpływ |
 |---|---|
-| **Nowy interesariusz** | S7 — Operator kart partnerskich (dochodzi do mapy interesariuszy w `01_SRS` §3). |
+| **Nowy interesariusz** | S7 — Operator kart partnerskich (dochodzi do mapy interesariuszy w [Części I §3](#część-i--specyfikacja-wymagań-oprogramowania-srs)). |
 | **Nowe/zmienione wymagania** | **Dodano** FR-024 (obsługa kart partnerskich: weryfikacja + naliczanie wejść). **Zmieniono** FR-013 (check-in rozróżnia karnet własny vs. kartę partnerską), FR-018 (raport rozliczeń z operatorem). |
 | **Dotknięte NFR** | NFR-004 (uprawnienia/integracja), NFR-005 (audyt wejść do rozliczeń), NFR-006 (RODO — przekazanie danych operatorowi). |
 | **Modele** | Diagram kontekstowy (nowy byt zewnętrzny „Operator kart"), use case (nowy przepływ check-in). |
@@ -1261,7 +1244,7 @@ nie przewidywał.
 członków, standard rynkowy) przeważył, ale administrator wymusił zabezpieczenia: pełny
 **audyt wejść** (NFR-005), **limit dzienny** wejść kartowych konfigurowalny per klub
 (ochrona obłożenia — postulat trenera), oraz **umowę powierzenia danych** (RODO). Pełny
-przebieg negocjacji: [`06_Role_playing.md` §2](#część-vi--role-playing).
+przebieg negocjacji: [Część VI (role-playing) §2](#2-warsztat-negocjacyjny--konflikt-wymagań).
 
 ---
 
@@ -1289,22 +1272,21 @@ zakresu poza klub stacjonarny.
 **Odroczona do priorytetu Could / release 3.** Uzasadnienie: niepewny popyt nie uzasadnia
 wysokiego kosztu i ryzyka w MVP. Zmiana **nie jest odrzucona** — trafia do backlogu z
 warunkiem ponownej oceny po pilotażu (np. jeden typ zajęć online jako eksperyment).
-Zob. [`06_Role_playing.md` §3](#część-vi--role-playing).
+Zob. [Część VI (role-playing) §3](#3-sesja-change-board--ocena-zmian).
 
 ---
 
 ### 5. Aktualizacja dokumentacji i wersjonowanie
-*Punktacja: 0–1.*
 
 Po decyzjach Change Board zaktualizowano spójnie **wszystkie** powiązane artefakty —
 to istota zarządzania zmianą (zmiana wymagania „propaguje się" przez dokumentację):
 
 | Artefakt | Co zaktualizowano |
 |---|---|
-| [`01_SRS.md`](#część-i--specyfikacja-wymagań-oprogramowania-srs) | dodano FR-005/014/015/024/025; zaktualizowano UC-01, dodano UC-05; modele (kontekst, BPMN, sekwencja); wersja **1.0 → 1.1** (historia zmian §9). |
-| [`03_Priorytetyzacja.md`](#część-iii--priorytetyzacja-wymagań) | FR-014/015/005 → Must; FR-024 → Should; FR-025 → Could; aktualizacja planu release. |
-| [`04_Walidacja.md`](#część-iv--walidacja-wymagań) | dodano TC-08, TC-09; macierz śledzenia rozszerzona o nowe FR; defekt D-04 (zamrożenie↔check-in). |
-| [`07_Volere.md`](#część-vii--dokumentacja-volere) | dodano karty Volere dla FR-015 i FR-024 z fit criteria. |
+| [Część I (SRS)](#część-i--specyfikacja-wymagań-oprogramowania-srs) | dodano FR-005/014/015/024/025; zaktualizowano UC-01, dodano UC-05; modele (kontekst, BPMN, sekwencja); wersja **1.0 → 1.1** (historia zmian §9). |
+| [Część III (priorytetyzacja)](#część-iii--priorytetyzacja-wymagań) | FR-014/015/005 → Must; FR-024 → Should; FR-025 → Could; aktualizacja planu release. |
+| [Część IV (walidacja)](#część-iv--walidacja-wymagań) | dodano TC-08, TC-09; macierz śledzenia rozszerzona o nowe FR; defekt D-04 (zamrożenie↔check-in). |
+| [Część VII (Volere)](#część-vii--dokumentacja-volere) | dodano karty Volere dla FR-015 i FR-024 z fit criteria. |
 | Rejestr zmian (§1) | wpisy CR-01..CR-03 ze statusami. |
 
 **Zasada wersjonowania:** każda zaakceptowana zmiana podnosi wersję SRS (minor: 1.0→1.1),
@@ -1318,7 +1300,7 @@ Na przykładzie CR-01–CR-03 zmiana pojedynczego wymagania **nigdy nie jest lok
 uruchamia łańcuch skutków, którym trzeba zarządzić:
 
 1. **Propagacja w dół śladu:** wymaganie → przypadki użycia → modele → moduły → testy →
-   priorytety. Dlatego utrzymujemy **macierz śledzenia** ([`04_Walidacja.md` §4](#4-macierz-śledzenia)) — pozwala natychmiast wskazać, co zmiana dotyka.
+   priorytety. Dlatego utrzymujemy **macierz śledzenia** ([Część IV (walidacja) §4](#4-macierz-śledzenia)) — pozwala natychmiast wskazać, co zmiana dotyka.
 2. **Nowy interesariusz = nowe perspektywy i konflikty** (CR-02): zmienia mapę interesariuszy,
    wprowadza wymagania bezpieczeństwa/rozliczeń i wymaga **negocjacji** (role-playing).
 3. **Koszt i ryzyko rosną z głębokością zmiany:** CR-01 (nowy moduł) i CR-03 (nowa domena
@@ -1405,12 +1387,11 @@ przychód ↔ bezpieczeństwo/rozliczenia ↔ obłożenie zajęć. **Uczestnicy:
 
 > **Wynik:** konflikt rozwiązany przez **negocjację**, nie głosowanie — każda obawa
 > przełożona na konkretne wymaganie/zabezpieczenie. Decyzja trafia do CR-02
-> ([`05_Zarzadzanie_zmiana.md` §3](#3-cr-02--karty-partnerskie-nowy-interesariusz)).
+> ([Część V (zarządzanie zmianą) §3](#3-cr-02--karty-partnerskie-nowy-interesariusz)).
 
 ---
 
 ### 3. Sesja Change Board — ocena zmian
-*Punktacja: 0–1 — role-playing w analizie zmian.*
 
 **Format:** komisja zmian (Change Board) ocenia 3 zgłoszenia (CR-01, CR-02, CR-03) z
 perspektywy ról. Każda rola wnosi inny argument — to pokazuje wykorzystanie role-playingu
@@ -1423,13 +1404,13 @@ perspektywy ról. Każda rola wnosi inny argument — to pokazuje wykorzystanie 
 > **Manager/PO:** Klasyfikuję jako **Must**, wysiłek L. Akceptacja. Dodaję obsługę nieudanych
 > płatności (retry + powiadomienie + zawieszenie) → TC-09.
 
-**Decyzja:** ✅ **Zaakceptowano (Must).**
+**Decyzja:** **Zaakceptowano (Must).**
 
 #### CR-02 — Karty partnerskie
 > (przebieg negocjacji powyżej, §2)
 > **Manager/PO:** Wszystkie obawy zaadresowane warunkami 1–5. Klasyfikuję jako **Should**.
 
-**Decyzja:** ✅ **Zaakceptowano warunkowo (Should, po MVP).**
+**Decyzja:** **Zaakceptowano warunkowo (Should, po MVP).**
 
 #### CR-03 — Zajęcia online / VOD
 > **Manager (zgłaszający):** Po pandemii część osób chce ćwiczyć zdalnie — może to przewaga.
@@ -1439,7 +1420,7 @@ perspektywy ról. Każda rola wnosi inny argument — to pokazuje wykorzystanie 
 > **Manager/PO:** Zgoda. Nie odrzucam pomysłu, ale **odraczam do Could / release 3** i proponuję
 > tani **pilotaż** jednego typu zajęć online, by zmierzyć realny popyt.
 
-**Decyzja:** 🕓 **Odroczono (Could, backlog + pilotaż).**
+**Decyzja:** **Odroczono (Could, backlog + pilotaż).**
 
 ---
 
@@ -1472,7 +1453,7 @@ znakiem rozpoznawczym są:
 ### 2. Karty wymagań (Volere Requirements Shell)
 
 Poniżej **6 reprezentatywnych** wymagań w pełnym szablonie Volere (po jednym z kluczowych
-obszarów). Pełna lista wymagań: [`01_SRS.md`](#część-i--specyfikacja-wymagań-oprogramowania-srs).
+obszarów). Pełna lista wymagań: [Część I (SRS)](#część-i--specyfikacja-wymagań-oprogramowania-srs).
 
 #### Karta — FR-008 (Rezerwacja zajęć)
 | Pole Volere | Treść |
@@ -1488,7 +1469,7 @@ obszarów). Pełna lista wymagań: [`01_SRS.md`](#część-i--specyfikacja-wymag
 | **Customer Dissatisfaction** | 5 |
 | **Priority** | Must |
 | **Conflicts** | — |
-| **Supporting Materials** | TC-03, TC-04 ([`04_Walidacja.md`](#część-iv--walidacja-wymagań)) |
+| **Supporting Materials** | TC-03, TC-04 ([Część IV (walidacja)](#część-iv--walidacja-wymagań)) |
 | **History** | v0.5 utworzono; v1.0 baseline |
 
 #### Karta — FR-009 (Lista rezerwowa / waitlista)
@@ -1539,7 +1520,7 @@ obszarów). Pełna lista wymagań: [`01_SRS.md`](#część-i--specyfikacja-wymag
 | **Customer Dissatisfaction** | 4 |
 | **Priority** | Must |
 | **Conflicts** | wymaga NFR-007 (PCI-DSS) |
-| **Supporting Materials** | TC-09; [`05_Zarzadzanie_zmiana.md` §2](#część-v--zarządzanie-zmianą) |
+| **Supporting Materials** | TC-09; [Część V (zarządzanie zmianą) §2](#2-cr-01--sprzedaż-online-i-subskrypcje-cykliczne) |
 | **History** | v1.1 dodano (CR-01) |
 
 #### Karta — FR-024 (Karty partnerskie) — *dodana w CR-02*
@@ -1556,7 +1537,7 @@ obszarów). Pełna lista wymagań: [`01_SRS.md`](#część-i--specyfikacja-wymag
 | **Customer Dissatisfaction** | 2 |
 | **Priority** | Should |
 | **Conflicts** | obłożenie zajęć (Trener) → limit; RODO → umowa powierzenia |
-| **Supporting Materials** | [`06_Role_playing.md` §2](#część-vi--role-playing) |
+| **Supporting Materials** | [Część VI (role-playing) §2](#2-warsztat-negocjacyjny--konflikt-wymagań) |
 | **History** | v1.1 dodano (CR-02, warunkowo) |
 
 #### Karta — NFR-001 (Czas odpowiedzi)
@@ -1581,7 +1562,7 @@ obszarów). Pełna lista wymagań: [`01_SRS.md`](#część-i--specyfikacja-wymag
 ### 3. Zbiorcza tabela fit criteria
 
 Każde wymaganie Volere musi być **testowalne**. Poniżej fit criteria dla pozostałych
-kluczowych wymagań (skrót — pełne opisy w [`01_SRS.md`](#część-i--specyfikacja-wymagań-oprogramowania-srs)):
+kluczowych wymagań (skrót — pełne opisy w [Część I (SRS)](#część-i--specyfikacja-wymagań-oprogramowania-srs)):
 
 | ID | Wymaganie | Fit criterion (mierzalne) |
 |---|---|---|
@@ -1603,21 +1584,21 @@ odpowiednik w naszej dokumentacji:
 
 | Sekcja szablonu Volere | Odpowiednik w projekcie |
 |---|---|
-| **1. Cele projektu (Purpose, Goals)** | [`01_SRS.md` §1.1–1.2](#część-i--specyfikacja-wymagań-oprogramowania-srs), [`README.md`](#mapa-punktacji-i-warunki-zaliczenia) |
-| **2. Interesariusze (Client, Customer, Stakeholders)** | [`01_SRS.md` §3](#część-i--specyfikacja-wymagań-oprogramowania-srs), [`06_Role_playing.md`](#część-vi--role-playing) |
-| **3. Użytkownicy produktu (Users)** | [`01_SRS.md` §2.3](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
-| **4. Ograniczenia (Constraints)** | [`01_SRS.md` §2.5](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
-| **5. Nazewnictwo i definicje (Glossary)** | [`01_SRS.md` §1.3](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
-| **6. Zakres pracy / kontekst (Scope, Context)** | [`01_SRS.md` §1.2, §2.1, §7.1](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
-| **7. Zakres produktu (Use Cases)** | [`01_SRS.md` §6, §7.2](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
-| **8. Wymagania funkcjonalne (Functional)** | [`01_SRS.md` §4](#część-i--specyfikacja-wymagań-oprogramowania-srs) + karty §2 |
-| **9. Wymagania niefunkcjonalne (Look&Feel, Usability, Performance, Security…)** | [`01_SRS.md` §5](#część-i--specyfikacja-wymagań-oprogramowania-srs) (wg ISO 25010) + karty §2 |
-| **10. Fit Criteria** | §2–3 tego dokumentu + kolumny „fit criterion" w `01_SRS` §5 |
-| **11. Priorytety (Customer Value)** | [`03_Priorytetyzacja.md`](#część-iii--priorytetyzacja-wymagań) + pola Satisfaction/Dissatisfaction w kartach |
-| **12. Ryzyka i zmiany (Risks, Migration, Open Issues)** | [`05_Zarzadzanie_zmiana.md`](#część-v--zarządzanie-zmianą) |
-| **13. Historia / wersjonowanie** | [`01_SRS.md` §9](#część-i--specyfikacja-wymagań-oprogramowania-srs), rejestr zmian |
+| **1. Cele projektu (Purpose, Goals)** | [Część I (SRS) §1.1–1.2](#część-i--specyfikacja-wymagań-oprogramowania-srs), [Mapa punktacji](#mapa-punktacji-i-warunki-zaliczenia) |
+| **2. Interesariusze (Client, Customer, Stakeholders)** | [Część I (SRS) §3](#część-i--specyfikacja-wymagań-oprogramowania-srs), [Część VI (role-playing)](#część-vi--role-playing) |
+| **3. Użytkownicy produktu (Users)** | [Część I (SRS) §2.3](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
+| **4. Ograniczenia (Constraints)** | [Część I (SRS) §2.5](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
+| **5. Nazewnictwo i definicje (Glossary)** | [Część I (SRS) §1.3](#13-definicje-akronimy-i-skróty-słownik) |
+| **6. Zakres pracy / kontekst (Scope, Context)** | [Część I (SRS) §1.2, §2.1, §7.1](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
+| **7. Zakres produktu (Use Cases)** | [Część I (SRS) §6, §7.2](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
+| **8. Wymagania funkcjonalne (Functional)** | [Część I (SRS) §4](#część-i--specyfikacja-wymagań-oprogramowania-srs) + karty §2 |
+| **9. Wymagania niefunkcjonalne (Look&Feel, Usability, Performance, Security…)** | [Część I (SRS) §5](#część-i--specyfikacja-wymagań-oprogramowania-srs) (wg ISO 25010) + karty §2 |
+| **10. Fit Criteria** | §2–3 tego dokumentu + kolumny „fit criterion" w [Części I §5](#część-i--specyfikacja-wymagań-oprogramowania-srs) |
+| **11. Priorytety (Customer Value)** | [Część III (priorytetyzacja)](#część-iii--priorytetyzacja-wymagań) + pola Satisfaction/Dissatisfaction w kartach |
+| **12. Ryzyka i zmiany (Risks, Migration, Open Issues)** | [Część V (zarządzanie zmianą)](#część-v--zarządzanie-zmianą) |
+| **13. Historia / wersjonowanie** | [Część I (SRS) §9](#część-i--specyfikacja-wymagań-oprogramowania-srs), rejestr zmian |
 
-> **Wniosek:** projekt spełnia oba warunki dokumentacyjne — **SRS** (struktura IEEE 830/29148
-> w `01_SRS.md`) oraz **Volere** (Requirements Shell, fit criteria i mapowanie struktury
+> **Wniosek:** projekt spełnia oba warunki dokumentacyjne — **SRS**
+> oraz **Volere** (Requirements Shell, fit criteria i mapowanie struktury
 > w tym dokumencie).
 
